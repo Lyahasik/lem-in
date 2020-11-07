@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   lem-in.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lyahasik <lyahasik@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dhorker <dhorker@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 22:31:13 by lyahasik          #+#    #+#             */
-/*   Updated: 2020/11/06 00:11:49 by lyahasik         ###   ########.fr       */
+/*   Updated: 2020/11/07 14:18:21 by dhorker          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@
 
 typedef struct	s_room
 {
-	struct s_room	*start;
 	struct s_room	*connect;
 	char			*name;
 	int				x;

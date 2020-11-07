@@ -3,109 +3,92 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lyahasik <lyahasik@student.42.fr>          +#+  +:+       +#+         #
+#    By: dhorker <dhorker@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/21 14:53:48 by dhorker           #+#    #+#              #
-#    Updated: 2020/11/05 23:45:05 by lyahasik         ###   ########.fr        #
+#    Updated: 2020/11/07 14:02:19 by dhorker          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 FLAGS =		-Wall -Wextra -Werror
 NAME =		libft.a
 
-FT_1 =		ft_memset
-FT_2 =		ft_bzero
-FT_3 =		ft_memcpy
-FT_4 =		ft_memccpy
-FT_5 =		ft_memmove
-FT_6 =		ft_memchr
-FT_7 =		ft_memcmp
-FT_8 =		ft_strlen
-FT_9 =		ft_strdup
-FT_10 =		ft_strcpy
-FT_11 =		ft_strncpy
-FT_12 =		ft_strcat
-FT_13 =		ft_strncat
-FT_14 =		ft_strlcat
-FT_15 =		ft_strchr
-FT_16 =		ft_strrchr
-FT_17 =		ft_strstr
-FT_18 =		ft_strnstr
-FT_19 =		ft_strcmp
-FT_20 =		ft_strncmp
-FT_21 =		ft_atoi
-FT_22 =		ft_isalpha
-FT_23 =		ft_isdigit
-FT_24 =		ft_isalnum
-FT_25 =		ft_isascii
-FT_26 =		ft_isprint
-FT_27 =		ft_toupper
-FT_28 =		ft_tolower
-FT_29 =		ft_memalloc
-FT_30 =		ft_memdel
-FT_31 =		ft_strnew
-FT_32 =		ft_strdel
-FT_33 =		ft_strclr
-FT_34 =		ft_striter
-FT_35 =		ft_striteri
-FT_36 =		ft_strmap
-FT_37 =		ft_strmapi
-FT_38 =		ft_strequ
-FT_39 =		ft_strnequ
-FT_40 =		ft_strsub
-FT_41 =		ft_strjoin
-FT_42 =		ft_strtrim
-FT_43 =		ft_strsplit
-FT_44 =		ft_itoa
-FT_45 =		ft_putchar
-FT_46 =		ft_putstr
-FT_47 =		ft_putendl
-FT_48 =		ft_putnbr
-FT_49 =		ft_putchar_fd
-FT_50 =		ft_putstr_fd
-FT_51 =		ft_putendl_fd
-FT_52 =		ft_putnbr_fd
-FT_53 =		ft_lstnew
-FT_54 =		ft_lstdelone
-FT_55 =		ft_lstdel
-FT_56 =		ft_lstadd
-FT_57 =		ft_lstiter
-FT_58 =		ft_lstmap
-FT_59 =		ft_strctrim
-FT_60 =		ft_sepchar
-FT_61 =		ft_putbyte1
-FT_62 =		ft_putbyte2
-FT_63 =		ft_putbyte4
-FT_64 =		ft_lstdelcut
-FT_65 =		ft_delmass
-FT_66 =		ft_swap
-FT_67 =		ft_numlen
-FT_68 =		ft_str_char_count
-FT_69 =		ft_min
-FT_70 =		ft_max
-FT_71 = 	ft_abs
-FT_72 = 	ft_check_atoi_int
-FT_73 = 	get_next_line
-FT_74 = 	ft_mem_free_two
-FT_75 = 	ft_out_message
-FT_76 = 	ft_mem_free_args
-
-FT_OBJ =	$(FT_1).o $(FT_2).o $(FT_3).o $(FT_4).o $(FT_5).o\
-			$(FT_6).o $(FT_7).o $(FT_8).o $(FT_9).o $(FT_10).o\
-			$(FT_11).o $(FT_12).o $(FT_13).o $(FT_14).o $(FT_15).o\
-			$(FT_16).o $(FT_17).o $(FT_18).o $(FT_19).o $(FT_20).o\
-			$(FT_21).o $(FT_22).o $(FT_23).o $(FT_24).o $(FT_25).o\
-			$(FT_26).o $(FT_27).o $(FT_28).o $(FT_29).o $(FT_30).o\
-			$(FT_31).o $(FT_32).o $(FT_33).o $(FT_34).o $(FT_35).o\
-			$(FT_36).o $(FT_37).o $(FT_38).o $(FT_39).o $(FT_40).o\
-			$(FT_41).o $(FT_42).o $(FT_43).o $(FT_44).o $(FT_45).o\
-			$(FT_46).o $(FT_47).o $(FT_48).o $(FT_49).o $(FT_50).o\
-			$(FT_51).o $(FT_52).o $(FT_53).o $(FT_54).o $(FT_55).o\
-			$(FT_56).o $(FT_57).o $(FT_58).o $(FT_59).o $(FT_60).o\
-			$(FT_61).o $(FT_62).o $(FT_63).o $(FT_64).o $(FT_65).o\
-			$(FT_66).o $(FT_67).o $(FT_68).o $(FT_69).o $(FT_70).o\
-			$(FT_71).o $(FT_72).o $(FT_73).o $(FT_74).o $(FT_75).o\
-			$(FT_76).o
+FT_OBJ =	ft_memset.o\
+			ft_bzero.o\
+			ft_memcpy.o\
+			ft_memccpy.o\
+			ft_memmove.o\
+			ft_memchr.o\
+			ft_memcmp.o\
+			ft_strlen.o\
+			ft_strdup.o\
+			ft_strcpy.o\
+			ft_strncpy.o\
+			ft_strcat.o\
+			ft_strncat.o\
+			ft_strlcat.o\
+			ft_strchr.o\
+			ft_strrchr.o\
+			ft_strstr.o\
+			ft_strnstr.o\
+			ft_strcmp.o\
+			ft_strncmp.o\
+			ft_atoi.o\
+			ft_isalpha.o\
+			ft_isdigit.o\
+			ft_isalnum.o\
+			ft_isascii.o\
+			ft_isprint.o\
+			ft_toupper.o\
+			ft_tolower.o\
+			ft_memalloc.o\
+			ft_memdel.o\
+			ft_strnew.o\
+			ft_strdel.o\
+			ft_strclr.o\
+			ft_striter.o\
+			ft_striteri.o\
+			ft_strmap.o\
+			ft_strmapi.o\
+			ft_strequ.o\
+			ft_strnequ.o\
+			ft_strsub.o\
+			ft_strjoin.o\
+			ft_strtrim.o\
+			ft_strsplit.o\
+			ft_itoa.o\
+			ft_putchar.o\
+			ft_putstr.o\
+			ft_putendl.o\
+			ft_putnbr.o\
+			ft_putchar_fd.o\
+			ft_putstr_fd.o\
+			ft_putendl_fd.o\
+			ft_putnbr_fd.o\
+			ft_lstnew.o\
+			ft_lstdelone.o\
+			ft_lstdel.o\
+			ft_lstadd.o\
+			ft_lstiter.o\
+			ft_lstmap.o\
+			ft_strctrim.o\
+			ft_sepchar.o\
+			ft_putbyte1.o\
+			ft_putbyte2.o\
+			ft_putbyte4.o\
+			ft_lstdelcut.o\
+			ft_delmass.o\
+			ft_swap.o\
+			ft_numlen.o\
+			ft_str_char_count.o\
+			ft_min.o\
+			ft_max.o\
+			ft_abs.o\
+			ft_check_atoi_int.o\
+			get_next_line.o\
+			ft_mem_free_two.o\
+			ft_out_message.o\
+			ft_mem_free_args.o
 
 FT_PRINTF =	$(addprefix ft_printf/support/, specificator.o support_1.o support_2.o ft_atolu.o \
 			ft_itoa_base.o ft_output.o ft_utoa.o out_type_diu.o \
